@@ -1,0 +1,12 @@
+https://console.cloud.google.com/apis/library/maps-backend.googleapis.com?id=fd73ab50-9916-4cde-a0f6-dc8be0a0d425&project=model-azimuth-170313&authuser=0
+
+https://console.cloud.google.com/google/maps-apis/overview;onboard=true?consoleReturnUrl=https:%2F%2Fcloud.google.com%2Fmaps-platform%2Fpricing%2F%3Fapis%3Dmaps%26project%3Dmodel-azimuth-170313&consoleUI=CLOUD&hl=ru&project=model-azimuth-170313
+
+
+Актуальная карта:
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR4CUujH-rZdjXw6gTcJ-EqTPAGSjlw50&callback=initMap"></script>
+
+
+
+https://art-lemon.com/google-maps-api-key - инструкция 

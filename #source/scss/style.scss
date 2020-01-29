@@ -1,0 +1,230 @@
+//----------------ШРИФТЫ
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900&display=swap");
+
+//----------------ОБНУЛЯЮЩИЕ СТИЛИ
+@import "nullstyle.scss";
+//----------------UI
+@import "ui.scss";
+//----------------HEADER
+@import "header.scss";
+//----------------FOOTER
+@import "footer.scss";
+
+//----------------ОБОЛОЧКА
+.wrapper {
+  width: 100%;
+  height: 3000px;
+  overflow: hidden;
+}
+
+//---------------КОНТЕЙНЕР
+.container {
+  width: 100%;
+  max-width: $mw;
+  margin: 0 auto;
+}
+
+//---------------ОСНОВНАЯ ЧАСТЬ
+
+//---------------PROMO
+
+.promo {
+  padding: 0px 5% 0px 5%;
+  background-color: #f0f0f0;
+  // .promo__body
+
+  &__body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    &:after {
+      content: "";
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: $violet;
+    }
+    @media (max-width: $md2) {
+      display: block;
+    }
+  }
+
+  // .promo__content
+
+  &__content {
+    width: 50%;
+    //flex: 0 1 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-50%);
+    padding: 3% 4% 5% 4%;
+    background: $violet;
+    @media (max-width: $md2) {
+      width: auto;
+      position: relative;
+      padding: 5% 6% 7% 6%;
+      transform: translateY(0);
+    }
+    @media (max-width: $md3) {
+      padding: 7% 8% 9% 8%;
+    }
+  }
+
+  // .promo__category
+
+  &__category {
+    padding: 0px 0px 30px 0px;
+    margin: 0px 0px 50px 0px;
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.45px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @media (max-width: $md1) {
+      font-size: 14px;
+    }
+    @media (max-width: 1000px) {
+      padding: 0px 0px 20px 0px;
+      margin: 0px 0px 30px 0px;
+    }
+    @media (max-width: $md3) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  // .promo__title
+
+  &__title {
+    margin: 0px 0px 60px 0px;
+    @include titleRaleway;
+    text-transform: none;
+    @media (max-width: 1000px) {
+      margin: 0px 0px 45px 0px;
+    }
+    @media (max-width: $md3) {
+      margin: 0px 0px 35px 0px;
+    }
+  }
+
+  // .promo__button
+
+  &__button {
+  }
+
+  // .promo__image
+
+  &__image {
+    flex: 0 1 75%;
+    padding: 0px 0px 60% 0px;
+    @media (max-width: $md2) {
+      padding: 0px 0px 40% 0px;
+    }
+  }
+}
+
+//---------------ARTICLES
+
+.articles {
+  padding: 0px 5%;
+  // .articles__body
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .articles__column
+  &__column {
+    flex: 0 1 50%;
+    &:nth-of-type(4n-1) > .article,
+    &:nth-of-type(4n) > .article {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.article {
+  display: flex;
+  align-items: stretch;
+  // .article__column
+  &__column {
+    flex: 0 1 50%;
+  }
+
+  // .article__content
+  &__content {
+    padding: 45px 25px;
+  }
+
+  // .article__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 30px 0px;
+  }
+
+  &__category,
+  &__date {
+    font-family: $fontFamily;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.7em;
+  }
+
+  // .article__category
+  &__category {
+    color: $violet;
+  }
+
+  // .article__date
+  &__date {
+    color: #000000;
+    opacity: 0.2;
+  }
+
+  // .article__title
+  &__title {
+    position: relative;
+    margin: 0px 0px 100px 0px;
+    @include titleArticle;
+    &:after {
+      content: "";
+      width: 105px;
+      height: 4px;
+      position: absolute;
+      bottom: -45px;
+      left: 0;
+      background: #000;
+    }
+  }
+
+  // .article__text
+  &__text {
+    margin: 0px 0px 60px 0px;
+    opacity: 0.4;
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.25em;
+    color: #000000;
+  }
+
+  // .article__button
+  &__button {
+  }
+
+  // .article__image
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
